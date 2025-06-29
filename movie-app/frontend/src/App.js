@@ -16,7 +16,10 @@ const HomePage = ({
   handleEdit,
   handleDelete,
   resetForm,
-  handleInputChange
+  handleInputChange,
+  selectedMovie,
+  handleImageClick,
+  closeMovieModal
 }) => (
   <div className="home-container">
     <div className="home-header">
@@ -108,7 +111,12 @@ const HomePage = ({
     <div className="movies-grid">
       {movies.map(movie => (
         <div key={movie._id} className="movie-card">
-          <img src={movie.posterUrl} alt={movie.title} className="movie-poster" />
+          <img 
+            src={movie.posterUrl} 
+            alt={movie.title} 
+            className="movie-poster clickable-poster" 
+            onClick={() => handleImageClick(movie)}
+          />
           <div className="movie-info">
             <h3>{movie.title}</h3>
             <p className="year">ปี: {movie.year}</p>
@@ -136,6 +144,69 @@ const HomePage = ({
         </div>
       ))}
     </div>
+
+    {/* Movie Detail Modal */}
+    {selectedMovie && (
+      <div className="movie-modal-overlay" onClick={closeMovieModal}>
+        <div className="movie-modal-container" onClick={(e) => e.stopPropagation()}>
+          <button className="movie-modal-close" onClick={closeMovieModal}>
+            ×
+          </button>
+          <div className="movie-modal-content">
+            <div className="movie-modal-poster">
+              <img src={selectedMovie.posterUrl} alt={selectedMovie.title} />
+            </div>
+            <div className="movie-modal-details">
+              <h2>{selectedMovie.title}</h2>
+              <div className="movie-modal-info">
+                <div className="info-row">
+                  <span className="info-label">ปีที่ฉาย:</span>
+                  <span className="info-value">{selectedMovie.year}</span>
+                </div>
+                <div className="info-row">
+                  <span className="info-label">คะแนน IMDB:</span>
+                  <span className="info-value imdb-score">{selectedMovie.imdbScore}/10</span>
+                </div>
+                <div className="info-row">
+                  <span className="info-label">Rotten Tomatoes:</span>
+                  <span className="info-value rt-score">{selectedMovie.rottenTomatoScore}%</span>
+                </div>
+                <div className="info-row">
+                  <span className="info-label">เพิ่มเมื่อ:</span>
+                  <span className="info-value">{new Date(selectedMovie.createdAt).toLocaleDateString('th-TH')}</span>
+                </div>
+                {selectedMovie.updatedAt !== selectedMovie.createdAt && (
+                  <div className="info-row">
+                    <span className="info-label">แก้ไขล่าสุด:</span>
+                    <span className="info-value">{new Date(selectedMovie.updatedAt).toLocaleDateString('th-TH')}</span>
+                  </div>
+                )}
+              </div>
+              <div className="movie-modal-actions">
+                <button 
+                  className="modal-edit-btn"
+                  onClick={() => {
+                    handleEdit(selectedMovie);
+                    closeMovieModal();
+                  }}
+                >
+                  แก้ไขภาพยนตร์
+                </button>
+                <button 
+                  className="modal-delete-btn"
+                  onClick={() => {
+                    handleDelete(selectedMovie._id);
+                    closeMovieModal();
+                  }}
+                >
+                  ลบภาพยนตร์
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
 
     {movies.length === 0 && !loading && (
       <div className="empty-message">
@@ -215,6 +286,7 @@ const App = () => {
   const [currentProfileIndex, setCurrentProfileIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [selectedMovie, setSelectedMovie] = useState(null); // เพิ่มสำหรับ movie modal
 
   const [editingMovie, setEditingMovie] = useState(null);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -330,10 +402,19 @@ const App = () => {
     setShowAddForm(false);
   };
 
+  // เพิ่มฟังก์ชันสำหรับ movie modal
+  const handleImageClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
+  const closeMovieModal = () => {
+    setSelectedMovie(null);
+  };
+
   return (
     <div className="App">
       <nav className="navbar">
-        <div className="nav-brand">CT519 Movie App</div>
+        <div className="nav-brand">Movie App</div>
         <div className="nav-links">
           <button 
             className={currentPage === 'home' ? 'nav-link active' : 'nav-link'}
@@ -365,6 +446,9 @@ const App = () => {
             handleDelete={handleDelete}
             resetForm={resetForm}
             handleInputChange={handleInputChange}
+            selectedMovie={selectedMovie}
+            handleImageClick={handleImageClick}
+            closeMovieModal={closeMovieModal}
           />
         ) : (
           <AboutPage 
