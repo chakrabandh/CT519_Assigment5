@@ -1,39 +1,20 @@
 services:
-  # MongoDB Database
-  mongodb:
-    image: mongo:7.0
-    container_name: movie_app_mongodb
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password123
-      MONGO_INITDB_DATABASE: moviedb
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./mongodb_data:/data/db
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-    networks:
-      - movie_app_network
-
   # Backend API
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: movie_app_backend
-    restart: always
+    restart: unless-stopped
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=development
       - PORT=5000
-      - MONGODB_URI=mongodb://admin:password123@mongodb:27017/moviedb?authSource=admin
-    depends_on:
-      - mongodb
     volumes:
       - ./backend:/app
       - /app/node_modules
+      - backend_data:/app/data:rw
     command: npm run dev
     networks:
       - movie_app_network
@@ -44,7 +25,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: movie_app_frontend
-    restart: always
+    restart: unless-stopped
     ports:
       - "80:3000"
     environment:
@@ -62,7 +43,7 @@ services:
       - movie_app_network
 
 volumes:
-  mongodb_data:
+  backend_data:
 
 networks:
   movie_app_network:
