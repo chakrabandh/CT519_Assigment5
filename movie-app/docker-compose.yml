@@ -14,7 +14,7 @@ services:
     volumes:
       - ./backend:/app
       - /app/node_modules
-      - backend_data:/app/data:rw
+      - ./backend/data:/app/data:rw
     command: npm run dev
     networks:
       - movie_app_network
