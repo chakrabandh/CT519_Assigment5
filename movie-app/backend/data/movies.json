@@ -37,6 +37,16 @@
     "rottenTomatoScore": 95,
     "posterUrl": "https://musicart.xboxlive.com/7/4a373700-0000-0000-0000-000000000002/504/image.jpg",
     "createdAt": "2025-06-29T08:54:59.317Z",
-    "updatedAt": "2025-06-29T08:54:59.317Z"
+    "updatedAt": "2025-06-29T09:06:03.836Z"
+  },
+  {
+    "_id": "17511878759140dbmlu1d5",
+    "title": "ไทบ้าน เดอะซีรีย์",
+    "year": 2017,
+    "imdbScore": 9.9,
+    "rottenTomatoScore": 89,
+    "posterUrl": "https://cdni-hw.ch7.com/dm/sz-md/i/images/2021/06/29/60daa4cc986aa6.61523043.jpg",
+    "createdAt": "2025-06-29T09:04:35.914Z",
+    "updatedAt": "2025-06-29T09:04:35.914Z"
   }
 ]
