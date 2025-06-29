@@ -78,5 +78,45 @@
     "posterUrl": "https://image.bangkokbiznews.com/uploads/images/contents/w1024/2024/03/uiNH97LJMVIEZ3nq1kL8.webp?x-image-process=style/lg-webp",
     "createdAt": "2025-06-29T09:23:46.917Z",
     "updatedAt": "2025-06-29T09:23:46.917Z"
+  },
+  {
+    "_id": "1751190081508khm4kiv0m",
+    "title": "Inside Out 2",
+    "year": 2024,
+    "imdbScore": 7.7,
+    "rottenTomatoScore": 87,
+    "posterUrl": "https://m.media-amazon.com/images/S/pv-target-images/7390f647a1edb3cd152bda26e4b57a3be4e96dc603af64519a79273ab9850cd6.jpg",
+    "createdAt": "2025-06-29T09:41:21.508Z",
+    "updatedAt": "2025-06-29T09:41:21.508Z"
+  },
+  {
+    "_id": "1751190249646j98ftnk0w",
+    "title": "Car",
+    "year": 2017,
+    "imdbScore": 8.2,
+    "rottenTomatoScore": 89,
+    "posterUrl": "https://cdn.shopify.com/s/files/1/0420/1044/3928/products/00722-Cars-_Blackstone__Rounded_300x.png?v=1648036572",
+    "createdAt": "2025-06-29T09:44:09.646Z",
+    "updatedAt": "2025-06-29T09:44:27.400Z"
+  },
+  {
+    "_id": "1751190359783sk6v3lajg",
+    "title": "SAW",
+    "year": 2009,
+    "imdbScore": 8.9,
+    "rottenTomatoScore": 78,
+    "posterUrl": "https://image.tmdb.org/t/p/w154/pparEGTCxcTiImyVFoKD0LX11N8.jpg",
+    "createdAt": "2025-06-29T09:45:59.783Z",
+    "updatedAt": "2025-06-29T09:46:32.105Z"
+  },
+  {
+    "_id": "17511904492397py2kng41",
+    "title": "Armageddon",
+    "year": 1998,
+    "imdbScore": 9.8,
+    "rottenTomatoScore": 87,
+    "posterUrl": "https://i.redd.it/fpsr05tdjzpc1.jpeg",
+    "createdAt": "2025-06-29T09:47:29.239Z",
+    "updatedAt": "2025-06-29T09:47:29.239Z"
   }
 ]
