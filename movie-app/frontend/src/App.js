@@ -333,7 +333,7 @@ const App = () => {
   return (
     <div className="App">
       <nav className="navbar">
-        <div className="nav-brand">Movie App</div>
+        <div className="nav-brand">CT519 Movie App</div>
         <div className="nav-links">
           <button 
             className={currentPage === 'home' ? 'nav-link active' : 'nav-link'}
