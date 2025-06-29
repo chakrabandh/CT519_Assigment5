@@ -37,7 +37,7 @@
     "rottenTomatoScore": 95,
     "posterUrl": "https://musicart.xboxlive.com/7/4a373700-0000-0000-0000-000000000002/504/image.jpg",
     "createdAt": "2025-06-29T08:54:59.317Z",
-    "updatedAt": "2025-06-29T09:09:14.804Z"
+    "updatedAt": "2025-06-29T09:16:07.276Z"
   },
   {
     "_id": "17511878759140dbmlu1d5",
@@ -48,5 +48,35 @@
     "posterUrl": "https://cdni-hw.ch7.com/dm/sz-md/i/images/2021/06/29/60daa4cc986aa6.61523043.jpg",
     "createdAt": "2025-06-29T09:04:35.914Z",
     "updatedAt": "2025-06-29T09:04:35.914Z"
+  },
+  {
+    "_id": "1751188943787jsxnvqmsc",
+    "title": "อีส้ม สมหวัง",
+    "year": 2017,
+    "imdbScore": 6.7,
+    "rottenTomatoScore": 68,
+    "posterUrl": "https://img.monomax.me/5-Yl2pI_SBKD8C9N7q6a79FFuWQ=/monomax-obj.obs.ap-southeast-2.myhuaweicloud.com/assets/products/9156_xTQtq1OWTgVmlY2rXrYM.jpg",
+    "createdAt": "2025-06-29T09:22:23.787Z",
+    "updatedAt": "2025-06-29T09:22:23.787Z"
+  },
+  {
+    "_id": "1751188988397r2y3blxqc",
+    "title": "Bohemian Rhapsody",
+    "year": 2019,
+    "imdbScore": 8.9,
+    "rottenTomatoScore": 79,
+    "posterUrl": "https://chivarecord.com/wp-content/uploads/2022/10/IMG_2782.jpg",
+    "createdAt": "2025-06-29T09:23:08.397Z",
+    "updatedAt": "2025-06-29T09:23:08.397Z"
+  },
+  {
+    "_id": "1751189026917af5q6omrg",
+    "title": "ธี่หยด 2",
+    "year": 2024,
+    "imdbScore": 7.8,
+    "rottenTomatoScore": 89,
+    "posterUrl": "https://image.bangkokbiznews.com/uploads/images/contents/w1024/2024/03/uiNH97LJMVIEZ3nq1kL8.webp?x-image-process=style/lg-webp",
+    "createdAt": "2025-06-29T09:23:46.917Z",
+    "updatedAt": "2025-06-29T09:23:46.917Z"
   }
 ]
