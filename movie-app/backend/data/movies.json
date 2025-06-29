@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "movie_1",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "imdbScore": 9,
+    "rottenTomatoScore": 94,
+    "posterUrl": "https://s.isanook.com/mv/0/ud/3/19382/dark-pos.jpg",
+    "createdAt": "2025-06-29T08:53:15.964Z",
+    "updatedAt": "2025-06-29T08:53:49.398Z"
+  },
+  {
+    "_id": "movie_2",
+    "title": "Inception",
+    "year": 2010,
+    "imdbScore": 8.8,
+    "rottenTomatoScore": 87,
+    "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT84TFMM57ZOH_w7iPxK3O1C4-HzmTVX-IVpA&s",
+    "createdAt": "2025-06-29T08:53:15.964Z",
+    "updatedAt": "2025-06-29T08:54:15.319Z"
+  },
+  {
+    "_id": "movie_3",
+    "title": "Interstellar",
+    "year": 2014,
+    "imdbScore": 8.6,
+    "rottenTomatoScore": 72,
+    "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQIRMiKBnKi3tNYBJ5eb30QAfu9ncl1rfRcc38i2E4NOiAAgTsCsnTfMPzHt864eCxNY4&usqp=CAU",
+    "createdAt": "2025-06-29T08:53:15.964Z",
+    "updatedAt": "2025-06-29T08:54:36.318Z"
+  },
+  {
+    "_id": "1751187299317z70mwgstr",
+    "title": "Jack Reacher",
+    "year": 2015,
+    "imdbScore": 8.9,
+    "rottenTomatoScore": 95,
+    "posterUrl": "https://musicart.xboxlive.com/7/4a373700-0000-0000-0000-000000000002/504/image.jpg",
+    "createdAt": "2025-06-29T08:54:59.317Z",
+    "updatedAt": "2025-06-29T08:54:59.317Z"
+  }
+]

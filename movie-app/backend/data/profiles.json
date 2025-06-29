@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "profile_1",
+    "firstName": "จักรพันธุ์",
+    "lastName": "ฤทธิแผลง",
+    "nickname": "บอล",
+    "profileImage": "/images/student-photo-01.png",
+    "createdAt": "2025-06-29T08:53:15.964Z",
+    "updatedAt": "2025-06-29T08:53:15.964Z"
+  },
+  {
+    "_id": "profile_2",
+    "firstName": "พยุงศักดิ์",
+    "lastName": "ฟูกุนนา",
+    "nickname": "เอิร์ธ",
+    "profileImage": "/images/student-photo-02.jpg",
+    "createdAt": "2025-06-29T08:53:15.964Z",
+    "updatedAt": "2025-06-29T08:53:15.964Z"
+  }
+]
